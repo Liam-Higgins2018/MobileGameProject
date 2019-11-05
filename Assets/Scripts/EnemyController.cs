@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour
     public float rotateSpeed = 50f;
     public bool canShoot;
     public bool canRotate;
-    public float bound_X = -27f;
+    public float bound_X = -20f;
     public Transform attack_Point;
     public GameObject bulletPrefab;
 

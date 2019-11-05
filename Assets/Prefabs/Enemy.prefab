@@ -294,7 +294,7 @@ MonoBehaviour:
   rotateSpeed: 50
   canShoot: 1
   canRotate: 0
-  bound_X: -11
+  bound_X: -20
   attack_Point: {fileID: 5355960019086341288}
   bulletPrefab: {fileID: 4970322751346846036, guid: 9f9fdaba17de0ef409b6f0259c39dd1e,
     type: 3}

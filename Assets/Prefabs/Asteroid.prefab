@@ -136,6 +136,6 @@ MonoBehaviour:
   rotateSpeed: 50
   canShoot: 0
   canRotate: 1
-  bound_X: -11
+  bound_X: -20
   attack_Point: {fileID: 0}
-  bullet: {fileID: 0}
+  bulletPrefab: {fileID: 0}
