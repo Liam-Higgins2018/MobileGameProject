@@ -7,9 +7,17 @@ public class Bullet : MonoBehaviour
 
     public float speed = 5f;
     public float deactivate_Time = 3f;
-    // Start is called before the first frame update
+
+    [HideInInspector]
+    public bool is_EnemyBullet = false;
     void Start()
     {
+
+        if(is_EnemyBullet)
+        {
+            speed *= -1f;
+        }
+
         Invoke("DeactiveateGameObject", deactivate_Time);
     }
 
@@ -29,5 +37,10 @@ public class Bullet : MonoBehaviour
     void DeactiveateGameObject()
     {
         gameObject.SetActive(false);
+    }
+
+    void OnTriggerEnter2D(Collider2D target)
+    {
+
     }
 }
