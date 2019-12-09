@@ -27,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
             Instantiate(Asteroid[Random.Range(0, Asteroid.Length)], temp, Quaternion.identity);
         }
         else{
-            Instantiate(enemy, temp, Quaternion.Euler(0f, 0f, 0f));
+            Instantiate(enemy, temp, Quaternion.Euler(0f, 0f, 90f));
         }
 
         Invoke("SpawnEnemies", timer);

@@ -18,6 +18,13 @@ public class PlayerController : MonoBehaviour
     private float current_Attack_Timer;
     private bool attack_On;
 
+    private AudioSource laserAudio;
+
+    void Awake()
+    {
+        laserAudio = GetComponent<AudioSource>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +80,7 @@ public class PlayerController : MonoBehaviour
                 Instantiate(Player_Bullet, attack_Point.position, Quaternion.identity);
 
                 //play sound FX
+                laserAudio.Play();
             }
         }
     }

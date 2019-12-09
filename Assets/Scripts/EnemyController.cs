@@ -82,4 +82,28 @@ public class EnemyController : MonoBehaviour
             Invoke("Shooting", Random.Range(1f, 3f));
         }
     }
+
+    void TurnOffGameObject()
+    {
+        gameObject.SetActive(false);   
+    }
+
+    void OnTriggerEnter2D(Collider2D target){
+
+         if(target.tag =="Bullet")
+        {
+            canMove = false;
+            if(canShoot)
+            {
+                canShoot = false;
+                CancelInvoke("Shooting");
+            }
+
+            Invoke("TurnOffGameObject", 3f);
+
+            //play explosion sound
+            explosionSound.Play();
+            anim.Play("Destroyed");
+        }
+    }
 }
