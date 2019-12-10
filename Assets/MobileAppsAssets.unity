@@ -475,6 +475,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spaceship
       objectReference: {fileID: 0}
+    - target: {fileID: 4212976047452899295, guid: 40f4f81858d0d684ea30b762b89c60cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4212976047452899290, guid: 40f4f81858d0d684ea30b762b89c60cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -529,6 +534,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212976047292542771, guid: 40f4f81858d0d684ea30b762b89c60cc,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40f4f81858d0d684ea30b762b89c60cc, type: 3}

@@ -99,7 +99,7 @@ public class EnemyController : MonoBehaviour
                 CancelInvoke("Shooting");
             }
 
-            Invoke("TurnOffGameObject", 3f);
+            Invoke("TurnOffGameObject", 2f);
 
             //play explosion sound
             explosionSound.Play();
