@@ -7,13 +7,13 @@ public class WaveSpawner : MonoBehaviour
 
     public enum SpawnState
     {
-        SPAWNING, WAITING, COUNTING;
-    }
+        SPAWNING, WAITING, COUNTING
+    };
 
-    [System Serializable]
-    public class Wave()
+    [System.Serializable]
+    public class Wave
     {
-        public String name;
+        public string name;
         public Transform enemy;
         public int count;
         public float rate;
@@ -36,12 +36,17 @@ public class WaveSpawner : MonoBehaviour
 
     void Update()
     {
+        if(state == SpawnState.WAITING)
+        {
+
+        }
+
         if(waveCountdown <= 0)
         {
             if(state != SpawnState.SPAWNING)
             {
                 //Start Spawning Wave
-                StartCoroutine(SpawnWave(waves[nextWave]))
+                StartCoroutine(SpawnWave(waves[nextWave]));
             }
         }
         else
@@ -50,26 +55,28 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
+   
+
     IEnumerator SpawnWave(Wave _wave)
     {
         state = SpawnState.SPAWNING;
 
         for(int i = 0; i < _wave.count; i++)
         {
-            SpawnEnemy(_wave enemy)
-            yeild return new WaitForSeconds(1f / wave.rate);
+            SpawnEnemy(_wave.enemy);
+            yield return new WaitForSeconds(1f/_wave.rate);
         }
 
         //Spawn
         state = SpawnState.WAITING;
 
-        yeild break;
+        yield break;
     }
 
     void SpawnEnemy(Transform _enemy)
     {
         //Spawn Enemy
-        console.Debug("Spawning Enemy: " + _enemy name);
+        Debug.Log("Spawning Enemy: " + _enemy.name);
     }
 
 }
