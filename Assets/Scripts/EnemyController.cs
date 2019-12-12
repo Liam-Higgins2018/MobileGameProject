@@ -104,6 +104,7 @@ public class EnemyController : MonoBehaviour
             //play explosion sound
             explosionSound.Play();
             anim.Play("Destroyed");
+            
         }
     }
 }
