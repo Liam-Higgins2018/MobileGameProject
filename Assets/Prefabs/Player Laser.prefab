@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 94682278321454955}
   - component: {fileID: 6264151572215497249}
   - component: {fileID: 2700149968048676357}
+  - component: {fileID: 7033366189356852645}
   m_Layer: 0
   m_Name: Player Laser
   m_TagString: Bullet
@@ -145,3 +146,15 @@ MonoBehaviour:
   speed: 10
   deactivate_Time: 5
   is_EnemyBullet: 0
+--- !u!114 &7033366189356852645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4241977401391443039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e215df74a1416a749be1b7caf8a3f942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

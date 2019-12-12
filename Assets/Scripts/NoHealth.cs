@@ -5,7 +5,6 @@ using UnityEngine;
 public class NoHealth : MonoBehaviour
 {
     private bool _isDead = false;
-    public DeathMenu deathMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +16,10 @@ public class NoHealth : MonoBehaviour
     {
         if(_isDead == true)
         {
-            deathMenu.ToggleEndMenu();
+            return;
         }
 
-         Death();
+        Death();
     }
 
      private void Death()
@@ -29,7 +28,8 @@ public class NoHealth : MonoBehaviour
             if(GameObject.Find("Spaceship").GetComponent<Health>().health <= 0)
             {
                 _isDead = true;
-               // GetComponent<Score>().OnDeath();
+               GetComponent<ScoreManager>().Death();
+              // deathMenu.ToggleEndMenu(score);
             }
         }
 }
